@@ -38,7 +38,7 @@
 
 ATACAnnotateCelltype <- function(ATAC, signatures = "human.immune.CIBERSORT", min.score = 0, genes.test.use = "presto", genes.cutoff = 1E-5, orig.ident = NULL)
 {
-  DefaultAssay(ATAC) <- "ACTIVITY"
+  Seurat::DefaultAssay(ATAC) <- "ACTIVITY"
 
   if(is.null(orig.ident)){
      message("Identify cluster specific genes based on RP score ...")
