@@ -1,6 +1,7 @@
 # install required R packages
 library(devtools)
 
+Sys.setenv(R_REMOTES_NO_ERRORS_FROM_WARNINGS="true")
 BiocManager::install("org.Hs.eg.db", update=FALSE)
 BiocManager::install("org.Mm.eg.db",  update=FALSE)
 install_github("chenfeiwang/MAESTRO", upgrade = "never")
