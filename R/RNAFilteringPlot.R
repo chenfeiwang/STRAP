@@ -21,7 +21,7 @@ RNAFilteringPlot <- function(filepath, UMI.cutoff = 1000, gene.number.cutoff = 5
   RCB_blue = "#2166AC"
   RCB_red = "#B2182B"
 
-  UMI_gene = read.table(filepath, header = TRUE, row.names = 1)
+  UMI_gene = read.delim(filepath, header = TRUE, row.names = 1, sep = "\t")
   png(paste0(name,"_scRNA_cell_filtering.png"),width=4.8,height=4.8, res = 300, units = "in")
   par(mai = c(0.85, 0.85, 0.25, 0.25))
   plot(log10(UMI_gene[which(UMI_gene[,1] < UMI.cutoff | UMI_gene[,2] < gene.number.cutoff),1]+1),UMI_gene[which(UMI_gene[,1] < UMI.cutoff | UMI_gene[,2] < gene.number.cutoff),2],
