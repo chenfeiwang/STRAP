@@ -1,0 +1,16 @@
+MANIFEST
+build/*
+dist/*
+*.pyc
+.pydevproject
+.project
+*~
+.DS_Store
+.Rproj.user
+*.a
+*.o
+*.tar.gz
+*.tar.bz2
+*.dylib
+*.tmp
+*.egg-info/*
